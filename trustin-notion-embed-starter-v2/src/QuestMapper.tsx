@@ -52,9 +52,22 @@ const GRID: GridDomain[] = [
 ]
 
 const PATTERNS = [
-  { id:'R-Y-G-P', steps:['red','yellow','green','purple'], label:['R','Y','G','P'] },
-  { id:'Y-Y-G-H-P', steps:['yellow','yellow','green','orange','purple'], label:['Y','Y','G','H','P'] },
-  { id:'R-Y-H-Y-G-P', steps:['red','yellow','orange','yellow','green','purple'], label:['R','Y','H','Y','G','P'] },
+  // Core paths
+  { id: 'R-Y-G-P',          steps: ['red','yellow','green','purple'],                 label: ['R','Y','G','P'] },
+  { id: 'Y-Y-G-H-P',        steps: ['yellow','yellow','green','orange','purple'],     label: ['Y','Y','G','H','P'] },
+  { id: 'R-Y-H-Y-G-P',      steps: ['red','yellow','orange','yellow','green','purple'], label: ['R','Y','H','Y','G','P'] },
+
+  // The “Blue kickoff” route you used before
+  { id: 'B-Y-Y-G-P',        steps: ['blue','yellow','yellow','green','purple'],       label: ['B','Y(color)','Y(noun)','G','P'] },
+
+  // Short / on-ramp variants
+  { id: 'R-G-P',            steps: ['red','green','purple'],                           label: ['R','G','P'] },
+  { id: 'Y-G-P',            steps: ['yellow','green','purple'],                        label: ['Y','G','P'] },
+
+  // Mixed-focus alternates
+  { id: 'B-R-Y-G-P',        steps: ['blue','red','yellow','green','purple'],           label: ['B','R','Y','G','P'] },
+  { id: 'Y-G-Y-P',          steps: ['yellow','green','yellow','purple'],               label: ['Y','G','Y','P'] },
+  { id: 'R-H-P',            steps: ['red','orange','purple'],                          label: ['R','H','P'] },
 ]
 
 const PatternLabel = ({ parts }: { parts: string[] }) => (
